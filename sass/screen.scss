@@ -4,3 +4,136 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+@import "compass/layout";
+@import "compass/css3";
+
+
+// Colors
+
+$sand: rgb(176,168,131);
+$light-sand: lighten($sand, 30%);
+// $green: rgb(97,127,102);
+$green: rgb(89, 127, 73);
+$red: rgb(204,106,97);
+$grey: rgb(216,216,216);
+$white: rgb(224,224,224);
+$trans-white: rgba(255,255,255,0.3);
+$trans-sand: rgba(176,168,131,0.7);
+$trans-grey: rgba(216,216,216,0.8);
+// $trans-green: rgba(97,127,102,0.5);
+$trans-green: rgba(89, 127, 73,0.5);
+$trans-red: rgba(204,106,97,0.5);
+
+// Settings
+
+$standard-radius: 10px;
+$small-radius: 5px;
+
+// Fonts ---------------------------------------------------
+
+@import url(http://fonts.googleapis.com/css?family=Lobster+Two:700);
+@import url(http://fonts.googleapis.com/css?family=Bitter);
+// @import url(http://fonts.googleapis.com/css?family=Lato);
+
+
+// Compass Sticky Footer ------------------------------------
+
+@include sticky-footer( 12vmin, "#root", "#root-footer", "#main-footer");
+
+// Body ---------------------------------------------------------
+ 
+ body {
+	max-width: 556px;
+	margin: auto;
+
+	// font-family: Lato, Sans-serif;
+	// font-size: 1em;
+}
+
+img {
+ 	max-width: 100%;
+}
+
+#root {
+	background-image: image-url('hourglass-556x834-2x3.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+
+// Header and Footer for All Pages -----------------------------------------------
+
+header {
+	font-family: 'Lobster Two', cursive;
+	font-size: 10vmin;
+	font-weight: bold;
+	background-color: $trans-grey;
+	border-radius: 5px;
+	div {
+		padding: 1%;
+	}
+	.left {
+		text-align: left;
+	}
+	.right {
+		font-family: Bitter, Serif;
+		font-size: 8vmin;
+		font-weight: bold;
+		float: right;
+		padding-top: 5px;
+		padding-right: 10px;
+		padding-left: .5em;
+		border-left: solid 1px;
+		color: grey;
+	}
+}
+
+// Footer
+
+footer {
+	background-color: $trans-grey;
+	border-radius: 5px;
+	text-align: center;
+
+	img {
+		height: 10vmin;
+		position: relative;
+		top: 1vmin;
+	}
+}
+
+// Anchor tags
+
+a {
+	color: black;
+	text-decoration: none;
+
+}
+
+
+// Debate style buttons -----------------------------------------------
+
+.call-to-action {
+	font-family: Bitter, Serif;
+	font-size: 10vmin;
+	width: 40%;
+	min-height: 10vmin;
+	// margin-right: 5%;
+	// margin-left: 5%;
+	margin-top: 40vmin;
+	padding-bottom: 5%;
+	padding-top: 5%;
+	text-align: center;
+	background-color: $trans-sand;
+	border-radius: $standard-radius;
+	cursor: pointer;
+
+
+	&:hover {
+	  @include background-image( radial-gradient(white, $sand));
+	}
+
+} 
+
+
+
