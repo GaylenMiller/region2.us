@@ -43,8 +43,10 @@ $small-radius: 5px;
 // Body ---------------------------------------------------------
  
  body {
-	max-width: 556px;
+ 	min-width: 300px;
+	max-width: 1000px;
 	margin: auto;
+	min-height: 300px;
 
 	// font-family: Lato, Sans-serif;
 	// font-size: 1em;
@@ -63,29 +65,19 @@ img {
 
 // Header and Footer for All Pages -----------------------------------------------
 
+h1 {
+	font-size: 4em;
+}
+
 header {
 	font-family: 'Lobster Two', cursive;
-	font-size: 10vmin;
-	font-weight: bold;
 	background-color: $trans-grey;
 	border-radius: 5px;
-	div {
-		padding: 1%;
-	}
-	.left {
-		text-align: left;
-	}
-	.right {
-		font-family: Bitter, Serif;
-		font-size: 8vmin;
-		font-weight: bold;
-		float: right;
-		padding-top: 5px;
-		padding-right: 10px;
-		padding-left: .5em;
-		border-left: solid 1px;
-		color: grey;
-	}
+
+}
+
+.left {
+	text-align: left;
 }
 
 // Footer
@@ -111,16 +103,18 @@ a {
 }
 
 
-// Debate style buttons -----------------------------------------------
+// Call to action button -----------------------------------------------
 
-.call-to-action {
+#go-button {
 	font-family: Bitter, Serif;
-	font-size: 10vmin;
-	width: 40%;
-	min-height: 10vmin;
-	// margin-right: 5%;
-	// margin-left: 5%;
-	margin-top: 40vmin;
+	font-size: 5em;
+
+	width: 50%;
+	max-width: 500px;
+	bottom: 15%;
+	// margin: 30% 0 0 5%;
+	position: absolute;
+
 	padding-bottom: 5%;
 	padding-top: 5%;
 	text-align: center;
@@ -128,12 +122,10 @@ a {
 	border-radius: $standard-radius;
 	cursor: pointer;
 
-
 	&:hover {
 	  @include background-image( radial-gradient(white, $sand));
 	}
-
-} 
+}
 
 
 
