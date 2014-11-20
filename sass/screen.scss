@@ -162,8 +162,7 @@ a {
 	}
 }
 
-#download-button {
-	margin-top: 30px;
+.ezbutton {
 	width: 80%;
 	margin-left: 10%;
 	padding-bottom: 5%;
@@ -177,6 +176,14 @@ a {
 	&:hover {
 	  @include background-image( radial-gradient(white, $ezgreen));
 	}
+
+}
+
+#usability-button {
+	
+}
+#download-button {
+	margin-top: 30px;
 }
 
 @media screen and (min-width: 600px) {
