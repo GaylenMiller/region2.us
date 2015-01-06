@@ -12,17 +12,17 @@
 
 $sand: rgb(176,168,131);
 $light-sand: lighten($sand, 30%);
-// $green: rgb(97,127,102);
 $ezgreen: rgb(130,193,44);
 $red: rgb(204,106,97);
 $grey: rgb(216,216,216);
-$white: rgb(224,224,224);
+$light-grey: rgb(240,240,240); 
+$almost-white: rgb(248,248,248);
 $trans-white: rgba(255,255,255,0.3);
 $trans-sand: rgba(176,168,131,0.7);
 $trans-grey: rgba(216,216,216,0.8);
-// $trans-green: rgba(97,127,102,0.5);
 $trans-ezgreen: rgba(130,193,44,0.5);
 $trans-red: rgba(204,106,97,0.5);
+$ezjudges-blue: rgb(159,184,202);
 
 // Settings
 
@@ -32,56 +32,141 @@ $small-radius: 5px;
 // Fonts ---------------------------------------------------
 
 @import url(http://fonts.googleapis.com/css?family=Lobster+Two:700);
-@import url(http://fonts.googleapis.com/css?family=Bitter);
-// @import url(http://fonts.googleapis.com/css?family=Lato);
+@import url(http://fonts.googleapis.com/css?family=Didact+Gothic);
 
 
 // Compass Sticky Footer ------------------------------------
 
 @include sticky-footer( 32px, "#root", "#root-footer", "#main-footer");
 
-// Body ---------------------------------------------------------
+// Rules for standard elements ------------------------------
  
  body {
- 	min-width: 300px;
- 	max-width: 1100px;
+ 	min-width: 310px;
+ 	max-width: 800px;
 	margin: auto;
-	min-height: 300px;
-	// background-color: $trans-grey;
+	background-color: $light-grey;
 }
 
-img {
- 	max-width: 100%;
+header {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 4em;
+	padding-top: 10px;
+	text-align: center;
+	background-color: white;
+	border-bottom: solid 3px;
+	span {
+		position: relative;
+		bottom: 30px;
+	}
+	img {
+		max-height: 120px;
+	}
 }
+
+a {
+	display: inline-block;
+	color: black;
+	text-decoration: none;
+}
+
+// Class rules
+
+.standard-container {
+	margin-top: 15px;
+	border-bottom: solid 3px;
+	background-color: white;
+	padding: 5px;
+	img {
+		max-width: 50%;
+	}
+}
+
+.headline {
+	background-color: $trans-grey;
+	border-radius: 5px;
+}
+
+.image-go-container {
+	img {
+		max-width: 50%;
+		margin-left: 5px;
+		margin-top: 5px;
+		// margin: auto;
+	}
+	.go {
+		margin-top: 10px;
+		line-height: 200px;
+		width: 48%;
+	}
+}
+
+.go {
+	margin-top: 10px;
+	font-size: 5em;
+	width: 48%;
+	text-align: center;
+	vertical-align: top;
+	float: right;
+	background-color: $trans-sand;
+	border-radius: 25px; // $standard-radius;
+	cursor: pointer;
+	line-height: 200px;
+
+	&:hover {
+	  @include background-image( radial-gradient(white, $sand));
+	}
+}
+
+// ID Rules
 
 #debate-timer-container {
-	// background-image: image-url('hourglass-556x834-2x3.jpg');
-	// background-size: cover;
-	// background-repeat: no-repeat;
-	width: 90%;
-	margin-left: 5%;
-	height: 100%;
-
-	// position: absolute;
-	img {
-		padding-bottom: 10px;
-		border-bottom: solid 5px;
+	.go {
+	line-height: 400px;
 	}
 }
 
-#ezjudges-container {
+#debate-timer-headline {
+	font-family: 'Lobster Two', cursive;
+}
+
+#ezextemp-headline {
 	background-color: white;
-	text-align: center;
-
-	width: 90%;
-	margin-left: 5%;
-	height: 100%;
-	position: relative;
+	border-bottom: solid 1px;
+	border-radius: 0;
 	img {
-		margin: auto;
-		display: block;
+		max-height: 80px;
+		max-width: 100%;
+
 	}
 }
+
+#ezjudges-headline {
+	background-color: $ezjudges-blue;
+	padding: 5px 0 20px 20px;
+	border-radius: $small-radius;
+
+	span {
+		font-size: 5em;
+		font-family: 'Didact Gothic', sans-serif;
+		vertical-align: top;
+
+	}
+	
+}
+
+#ezverify-headline {
+	background-color: white;
+	border-bottom: solid 1px;
+	border-radius: 0;
+	margin-bottom: 5px;
+	img {
+		max-height: 131px;
+		max-width: 100%;
+
+	}
+}
+
 
 
 // Header and Footer for All Pages -----------------------------------------------
@@ -93,18 +178,7 @@ h2 {
 	font-size: 3em;
 }
 
-.headline {
-	background-color: $trans-grey;
-	border-radius: 5px;
-}
 
-#debate-timer-headline {
-	font-family: 'Lobster Two', cursive;
-}
-
-#ezjudges-headline {
-	margin-top: 30px;
-}
 
 
 // Footer
@@ -113,110 +187,12 @@ footer {
 	background-color: $grey;
 	border-radius: 5px;
 	text-align: center;
+	margin-top: 10px;
 
 	img {
 		height: 28px;
 		position: relative;
-		top: 2;
+		top: 3px;
 	}
 }
 
-// Anchor tags
-
-a {
-	color: black;
-	text-decoration: none;
-
-}
-
-.float-left {
-	float: left;
-}
-
-.float-right {
-	float: right;
-}
-
-
-// Call to action button -----------------------------------------------
-
-#go-button {
-	font-family: Bitter, Serif;
-	font-size: 5em;
-
-	width: 50%;
-	max-width: 500px;
-	top: 50%;
-	// margin: 30% 0 0 5%;
-	position: absolute;
-
-	padding-bottom: 5%;
-	padding-top: 5%;
-	text-align: center;
-	background-color: $trans-sand;
-	border-radius: $standard-radius;
-	cursor: pointer;
-
-	&:hover {
-	  @include background-image( radial-gradient(white, $sand));
-	}
-}
-
-.ezbutton {
-	width: 80%;
-	margin-left: 10%;
-	padding-bottom: 5%;
-	padding-top: 5%;
-	margin-bottom: 30px;
-
-	background-color: $trans-ezgreen;
-	border-radius: $standard-radius;
-	cursor: pointer;
-
-	&:hover {
-	  @include background-image( radial-gradient(white, $ezgreen));
-	}
-
-}
-
-#usability-button {
-	
-}
-#download-button {
-	margin-top: 30px;
-}
-
-@media screen and (min-width: 600px) {
-
-	#debate-timer-container {
-		width: 45%;
-		margin-left: 2.5%;
-		float: left;
-		img {
-			padding-bottom: 0;
-			border-bottom: none;
-		}
-		// padding: 1%;
-		border-right: solid 5px;
-		padding-right: 5px;
-		margin-right: 5px; 
-	}
-
-
-	#go-button {
-		width: 25%;
-	}
-
-	#ezjudges-container {
-		width: 45%;
-		margin-left: 0;
-		// left: 50%;
-		float: left;
-	}	
-
-	#ezjudges-headline {
-		margin-top: 0;
-	}
-}
-
-	
