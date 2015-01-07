@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>EZ Extemp Help</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link href="../css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
+    <!--
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    -->
+
+
+    <!-- Modernizr checks for browser capabilities and provides exist functions -->
+    <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+<body>
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div id="root">
+        <div id="ezextemp-headline" class="headline" >
+            <img src="../img/dice-256x256.png">
+            <img src="../img/ezextemp-logo.png" />
+        </div>
+
+        <div class="question-answer-container">
+            <div class="question">
+                <h3>How do I get started?</h3>
+            </div>
+            <div class="answer">
+                <h4>Using EZ Extemp can be as easy as 1, 2, 3</h4>
+                <p>After starting EZ Extemp, the steps are&hellip;</p>
+                <ol>
+                    <li><span class="step">1</span>Browse and pick the IE spreadsheet (verify it is not already open in Excel)</li>
+                    <li><span class="step">2</span>Click the <strong>Panel</strong> button</li>
+                    <li><span class="step">3</span>Click the <strong>Export</strong> Button</li>
+                </ol>
+                <p>Close EZ Extemp</p>
+            </div>
+        </div>
+        <div class="question-answer-container">
+            <div class="question">
+                <h3>How do I get the &ldquo;best&rdquo; panel?</h3>
+            </div>
+            <div class="answer">
+                <h4>The &ldquo;best&rdquo; panel is the one with lowest score</h4>
+                <p>The score is the total of all the &ldquo;bad&rdquo; conditions found in the panel. The score can be change two ways&hellip;</p>
+                <ol>
+                    <li><span class="step">1</span>Panel again &ndash; first placement attempt is  random (hence the die logo)</li>
+                    <li><span class="step">2</span>Drag and drop students to try to reduce the score</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="question-answer-container">
+            <div class="question">
+                <h3>What are some common problems?</h3>
+            </div>
+            <div class="answer">
+                <h4>The export not working.</h4>
+                <p> If the spreadsheet is locked, the export cannnot save the file and sometimes there is no notification. EZ Extemp is sending commands to Excel in the background and does not get and feedback when the &ldquo;Save&rdquo; requested. Sometimes Excel will pop up and ask &ldquo;The file already exists. Continue with Save?&rdquo;, and when answer yes, it still saves the file but in another location like &ldquo;My Documents&rdquo;</p>
+            </div>
+        </div>
+
+        <div class="question-answer-container">
+            <div class="question">
+                <h3>Is there more I can do?</h3>
+            </div>
+            <div class="answer">
+                <h4>Import existing panels to panel the remaining rounds.</h4>
+                <p>If for some reason it is necessary to re-panel an event in the middle of the tournament, click the boxes labeled &ldquo;Rounds to import from Spreadsheet&rdquo;. Most common is to import round 1 so that round 2 and 3 can be re-paneled. Then on the Export, only export rounds 2 and 3.</p>
+                <h4>Change the scoring values</h4>
+                <p>The values can be changed on the &ldquo;Scoring Value&rdquo; tab. If the &ldquo;Extemp&rdquo; event is being paneled, change the &ldquo;Extemp&rdquo; values. If any other event is being paneled, change the &ldquo;Standard&rdquo; values. Give a higher score to any condition that is undesirable. Currently for Extemp, the &ldquo;Prior Competitor&rdquo; and &ldquo;Same Club Same Sequence&rdquo; are not wanted and so they are set to 50. The unique entry on the tab is the &ldquo;Maximum Open Score&rdquo;. When a student getting placed, all spots in the round are search and the best &ldquo;Open&rdquo; and the best &ldquo;Occupied&rdquo; spots are found. If the best open spot is below the Maximum Open Score, the student is placed in the Open spot. If the best open spot is at or above the Maximum, they get the occupied spot and the previous occupant of that spot goes back in the list of students to be placed.</p>
+            </div>
+        </div>
+
+<!--         <div class="question-answer-container">
+            <div class="question">
+                <h3>Question?</h3>
+            </div>
+            <div class="answer">
+                <p>Answer</p>
+            </div>
+        </div>
+ -->
+
+        <img src="../img/dice-256x256.png">
+        <a href="../index.html" class="go">Back</a>
+        </a>
+
+
+        <div id="root-footer"></div>
+    </div>
+
+    <footer id="main-footer">
+        <a href="../index.html">
+            <img src="../img/region-2-logo-546x173.png">
+        </a>
+    </footer>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+    <!-- <script src="js/plugins.js"></script> -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>
