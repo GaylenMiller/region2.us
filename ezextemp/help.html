@@ -52,11 +52,12 @@
                 <h3>How do I get the &ldquo;best&rdquo; panel?</h3>
             </div>
             <div class="answer">
-                <h4>The &ldquo;best&rdquo; panel is the one with lowest score</h4>
-                <p>The score is the total of all the &ldquo;bad&rdquo; conditions found in the panel. The score can be change two ways&hellip;</p>
+                <h4>The &ldquo;best&rdquo; panel is the one with the lowest score</h4>
+                <p>The score is the total of all the &ldquo;bad&rdquo; conditions found in the panel. The score can be changed several ways&hellip;</p>
                 <ol>
-                    <li><span class="step">1</span>Panel again &ndash; first placement attempt is  random (hence the die logo)</li>
-                    <li><span class="step">2</span>Drag and drop students to try to reduce the score</li>
+                    <li><span class="step">1</span>Panel again &ndash; Paneling is part scoring and part random</li>
+                    <li><span class="step">2</span>Drag and swap students to try alternate arrangements</li>
+                    <li><span class="step">3</span>Increase the number of rooms</li>
                 </ol>
             </div>
         </div>
@@ -66,20 +67,25 @@
                 <h3>What are some common problems?</h3>
             </div>
             <div class="answer">
-                <h4>The export not working.</h4>
-                <p> If the spreadsheet is locked, the export cannnot save the file and sometimes there is no notification. EZ Extemp is sending commands to Excel in the background and does not get and feedback when the &ldquo;Save&rdquo; requested. Sometimes Excel will pop up and ask &ldquo;The file already exists. Continue with Save?&rdquo;, and when answer yes, it still saves the file but in another location like &ldquo;My Documents&rdquo;</p>
-            </div>
+                <h4>The export is not working</h4>
+                <p> If the IE spreadsheet is already open in Excel, the export cannnot save the file. </p>
+                <p>Background: EZ Extemp is talking to Excel to read, update and save the changes to the IE Spreadsheet. When the &ldquo;Save&rdquo; is requested and cannot be completed, sometimes Excel will pop up and ask &ldquo;The file already exists. Continue with Save?&rdquo;, and it may save the file, but in another folder like &ldquo;My Documents&rdquo;</p>
+                <h4>The &ldquo;Panel Display&rdquo; will not scroll to display the bottom of the panel</h4>
+                <p>The only way to scroll the Panel Display is to click and drag the scroll bar on the right side of the screen. (The situation is regrettable and a search is in progress for a more capable component that will response to the mouse wheel.)</p>
+             </div>
         </div>
 
         <div class="question-answer-container">
             <div class="question">
-                <h3>Is there more I can do?</h3>
+                <h3>What are the other features?</h3>
             </div>
             <div class="answer">
-                <h4>Import existing panels to panel the remaining rounds.</h4>
-                <p>If for some reason it is necessary to re-panel an event in the middle of the tournament, click the boxes labeled &ldquo;Rounds to import from Spreadsheet&rdquo;. Most common is to import round 1 so that round 2 and 3 can be re-paneled. Then on the Export, only export rounds 2 and 3.</p>
-                <h4>Change the scoring values</h4>
-                <p>The values can be changed on the &ldquo;Scoring Value&rdquo; tab. If the &ldquo;Extemp&rdquo; event is being paneled, change the &ldquo;Extemp&rdquo; values. If any other event is being paneled, change the &ldquo;Standard&rdquo; values. Give a higher score to any condition that is undesirable. Currently for Extemp, the &ldquo;Prior Competitor&rdquo; and &ldquo;Same Club Same Sequence&rdquo; are not wanted and so they are set to 50. The unique entry on the tab is the &ldquo;Maximum Open Score&rdquo;. When a student getting placed, all spots in the round are search and the best &ldquo;Open&rdquo; and the best &ldquo;Occupied&rdquo; spots are found. If the best open spot is below the Maximum Open Score, the student is placed in the Open spot. If the best open spot is at or above the Maximum, they get the occupied spot and the previous occupant of that spot goes back in the list of students to be placed.</p>
+                <h4>Importing existing panels to panel the remaining rounds</h4>
+                <p>If it is necessary to re-panel an event in the middle of the tournament, click the boxes labeled &ldquo;Rounds to import from Spreadsheet&rdquo;. For example, importing round 1 so that rounds 2 and 3 can be re-paneled. When a round is marked for import it is automatically excluded from the export.</p>
+                <h4>Changing the scoring values</h4>
+                <p>The values can be changed on the &ldquo;Scoring Values&rdquo; tab. If the &ldquo;Extemp&rdquo; event is being paneled, change the &ldquo;Extemp&rdquo; values. If any other event is being paneled, change the &ldquo;Standard&rdquo; values. Give a higher score to any condition that is undesirable. </p>
+                <p>For Extemp, the &ldquo;Prior Competitor&rdquo; and &ldquo;Same Club Same Sequence&rdquo; are the most undesirable conditions wanted and so the scoring value is set to 50.</p>
+                <p>The last score value, the &ldquo;Maximum Open Score&rdquo; is different. When a student is being placed, all spots in the round are search and the best &ldquo;Open&rdquo; and the best &ldquo;Occupied&rdquo; spots are found. If the best open spot is below the Maximum Open Score, the student is placed in the open spot. If the best open spot is at or above the maximum, the student is placed in the occupied spot and the student who was is that spot goes back in the list of students to be placed.</p>
             </div>
         </div>
 

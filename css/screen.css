@@ -133,7 +133,7 @@ a {
 /* line 75, ../sass/screen.scss */
 ol {
   line-height: 2em;
-  margin-left: 2em;
+  margin-left: 3em;
   font-size: 1.1em;
 }
 
@@ -210,102 +210,113 @@ ol {
 /* line 144, ../sass/screen.scss */
 .question-answer-container p {
   line-height: 120%;
+  margin-right: 10px;
 }
 
-/* line 148, ../sass/screen.scss */
+/* line 149, ../sass/screen.scss */
 .question {
   border-bottom: 1px solid;
   padding-bottom: 5px;
 }
 
-/* line 159, ../sass/screen.scss */
+/* line 153, ../sass/screen.scss */
+.question-ezjudges {
+  background-color: #9fb8ca;
+  padding-bottom: 5px;
+}
+
+/* line 164, ../sass/screen.scss */
 #debate-timer-container .go {
   line-height: 400px;
 }
 
-/* line 164, ../sass/screen.scss */
+/* line 169, ../sass/screen.scss */
 #debate-timer-headline {
   font-family: 'Lobster Two', cursive;
 }
 
-/* line 168, ../sass/screen.scss */
+/* line 173, ../sass/screen.scss */
 #ezextemp-headline {
   background-color: white;
   border-bottom: solid 1px;
   border-radius: 0;
 }
-/* line 172, ../sass/screen.scss */
+/* line 177, ../sass/screen.scss */
 #ezextemp-headline img {
   max-height: 80px;
   max-width: 100%;
 }
 
-/* line 179, ../sass/screen.scss */
+/* line 184, ../sass/screen.scss */
 #ezjudges-headline {
   background-color: #9fb8ca;
   padding: 5px 0 20px 20px;
   border-radius: 5px;
 }
-/* line 184, ../sass/screen.scss */
+/* line 189, ../sass/screen.scss */
+#ezjudges-headline img {
+  max-height: 100px;
+}
+/* line 192, ../sass/screen.scss */
 #ezjudges-headline span {
   font-size: 5rem;
   font-family: 'Didact Gothic', sans-serif;
   vertical-align: top;
 }
 
-/* line 193, ../sass/screen.scss */
+/* line 201, ../sass/screen.scss */
 #ezverify-headline {
   background-color: white;
   border-bottom: solid 1px;
   border-radius: 0;
   margin-bottom: 5px;
 }
-/* line 198, ../sass/screen.scss */
+/* line 206, ../sass/screen.scss */
 #ezverify-headline img {
   max-height: 131px;
   max-width: 100%;
 }
 
-/* line 208, ../sass/screen.scss */
+/* line 216, ../sass/screen.scss */
 h1, h2, h3, h4, h5, p, ul, ol {
   margin-top: 10px;
 }
 
-/* line 212, ../sass/screen.scss */
+/* line 220, ../sass/screen.scss */
 h1 {
   font-size: 4rem;
 }
 
-/* line 215, ../sass/screen.scss */
+/* line 223, ../sass/screen.scss */
 h2 {
   font-size: 3rem;
-  margin-left: 10px;
-}
-
-/* line 220, ../sass/screen.scss */
-h3 {
-  font-size: 2.25rem;
-  margin-left: 20px;
-}
-
-/* line 224, ../sass/screen.scss */
-h4 {
-  font-size: 1.5rem;
-  margin-left: 30px;
+  margin-left: 12px;
 }
 
 /* line 228, ../sass/screen.scss */
-p {
-  margin-left: 40px;
+h3 {
+  font-size: 2.25rem;
+  margin-left: 24px;
 }
 
-/* line 239, ../sass/screen.scss */
+/* line 232, ../sass/screen.scss */
+h4 {
+  font-size: 1.5rem;
+  margin-left: 36px;
+}
+
+/* line 236, ../sass/screen.scss */
+p {
+  margin-left: 48px;
+}
+
+/* line 247, ../sass/screen.scss */
 footer {
   background-color: #d8d8d8;
   border-radius: 5px;
   text-align: center;
 }
-/* line 245, ../sass/screen.scss */
+/* line 253, ../sass/screen.scss */
 footer img {
   height: 28px;
   position: relative;
