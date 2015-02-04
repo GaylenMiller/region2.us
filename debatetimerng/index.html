@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" ng-app="debateTimer"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Debate Timer | Style</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link href="../css/debatetimer.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="css/font-awesome.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="http://region2.us/debatetimerng/favicon.ico?v=2" />
+
+
+    <!-- Modernizr checks for browser capabilities and provides exist functions -->
+    <!-- <script src="js/vendor/modernizr-2.6.2.min.js"></script> -->
+</head>
+<body>
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div id="root" ng-controller="DebateTimmerAppController as root">
+        <header>
+            <a href="index.html"><span class="xleft">Debate Timer</span></a>
+            <div ng-show="style.styleLd()">
+                <img src="img/standing75.svg" >
+            </div>
+            <div ng-show="style.styleTp()">
+                <img src="img/two201.svg">
+                <img src="img/two201.svg">
+            </div>
+        </header>
+
+        <div class="between-header-footer" ng-show="showStylePicker()">
+            <div class="info">Pick a Debate Style</div>
+        
+            <div id="debate-style_button_container" >
+
+                    <div class="debate-style-button" id="ld-button" ng-click="debateStyleLd()">
+                        <img src="img/standing75.svg">
+                        <h2>Lincoln Douglas</h2>
+                    </div>  
+                    <div class="debate-style-button" id="tp-button" ng-click="debateStyleTp()"> 
+                        <img src="img/two201.svg">
+                        <img src="img/two201.svg">
+                        <h2>Team Policy</h2>
+                    </div>
+            </div>
+        </div>
+
+        <form class="between-header-footer" ng-show="showSpeakerInputs()">
+            <div class="div-with-header">
+                <span class="white-header">Affirmative {{ speakerHeading }}</span>
+                <label for="1A" ng-show="styleTp()">1</label>
+                <input type="text" name="1A" autofocus="autofocus" placeholder="{{ defaultAff1 }}" ng-model="affSpeaker1"><br>
+                <label for="2A" ng-show="styleTp()">2</label>
+                <input type="text" name="2A" placeholder="Aff 2" ng-show="styleTp()" ng-model="affSpeaker2">
+            </div>
+            <div class="div-with-header">
+                <span class="white-header">Negative {{ speakerHeading }}</span>
+                <label for="1N" class="style-tp" ng-show="styleTp()">1</label>
+                <input type="text" name="1N" placeholder="{{ defaultNeg1 }}" ng-model="negSpeaker1"><br>
+                <label for="2N" class="style-tp" ng-show="styleTp()">2</label>
+                <input type="text" name="2N" class="style-tp" placeholder="Neg 2" ng-show="styleTp()" ng-model="negSpeaker2">
+            </div>
+            <div class="button-prev-next sand-hover" id="button-prev" ng-click="clearStyle()"><i class="fa fa-chevron-left"></i>
+            </div>
+            <div class="button-prev-next sand-hover" id="button-next" ng-click="loadSchedule()">Start Round <i class="fa fa-chevron-right"></i>
+            </div>
+
+        </form>
+        <div class="between-header-footer" ng-show="showTimer()">
+            <div id="speech-speaker-container" class="div-with-header">
+                <span class="white-header">Speech &amp; Speaker</span>
+                <div id="speech-speaker-header">
+                    <span id="speech-heading">1AC</span>
+                    <span id="speaker-heading">Gaylen Miller</span>
+                </div>
+            </div>
+
+            <div id="timer-container" class="div-with-header">
+                <span class="white-header">Time Remaining</span>
+                <canvas id="sand-column"></canvas>
+                <div id="timer-display">0:00</div>
+            </div>
+
+            <div id="well-done-image" class="div-with-header">
+                <span class="white-header">Well Done!</span>
+                <img src="img/welldone-692x692.jpg">
+                <div class="block">
+                    <a href="index.html" class="control-buttons active"><span class="iconfont">V</span> Restart</a>                    
+                </div>
+            </div>
+
+            <div id="start-stop-button" class="start">Start</div>
+
+            <div id="down-arrow" class="control-buttons active"><span class="iconfont">{</span> Show</div>
+            <div id="up-arrow" class="control-buttons active" ><span class="iconfont"}>}</span> Hide</div>
+            <div id="next-speech-button" class="control-buttons active">Next Speaker</div>
+        </div>
+
+
+        <div id="root-footer"></div>
+    </div>
+
+    <footer id="main-footer">
+        <div class="footer-left"><a target="_blank" href="http://www.linkedin.com/pub/gaylen-miller/15/b90/62/"><i class="fa fa-male"></i> Author</a></div>
+        <img src="img/region-2-logo-546x173.png">
+        <div class="footer-right"><a target="_blank" href="https://www.surveymonkey.com/r/5Q7BFKV"><i class="fa fa-comment"></i> Feedback</a></div>
+    </footer>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='http://www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-56618114-1');ga('send','pageview');
+    </script>
+</body>
+</html>

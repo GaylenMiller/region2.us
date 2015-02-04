@@ -1,0 +1,520 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/layout";
+@import "compass/css3";
+
+
+// Colors
+
+$sand: rgb(176,168,131);
+$light-sand: lighten($sand, 30%);
+// $green: rgb(97,127,102);
+$green: rgb(89, 127, 73);
+$red: rgb(204,106,97);
+$grey: rgb(216,216,216);
+$white: rgb(248,248,248);
+$trans-white: rgba(255,255,255,1);
+$trans-sand: rgba(176,168,131,0.7);
+$trans-grey: rgba(216,216,216,0.8);
+// $trans-green: rgba(97,127,102,0.5);
+$trans-green: rgba(89, 127, 73,0.8);
+$trans-red: rgba(204,106,97,0.8);
+$instruction-color: #FCF6D5;
+
+// Settings
+
+$standard-radius: 10px;
+$small-radius: 5px;
+
+// Fonts ---------------------------------------------------
+
+@import url(http://fonts.googleapis.com/css?family=Lobster+Two:700);
+@import url(http://fonts.googleapis.com/css?family=Bitter);
+@import url(http://fonts.googleapis.com/css?family=Lato);
+
+
+// Compass Sticky Footer ------------------------------------
+
+@include sticky-footer( 2em, "#root", "#root-footer", "#main-footer");
+
+// Body ---------------------------------------------------------
+
+body {
+
+	max-width: 1000px;
+	min-width: 300px;
+	min-height: 340px;
+	margin: auto;
+
+	font-family: Lato, Sans-serif;
+	font-size: 1em;
+	background-color: $white;
+}
+
+img {
+	// max-width: 100%;
+}
+
+h1 {
+	font-size: 2.5em;
+}
+h2{
+	font-size: 1.5em;
+}
+h3 {
+	padding-top: .25em;
+	font-size: 1em;
+}
+
+#root {
+	background-image: image_url('hourglass-556x834-2x3.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+// Header and Footer for All Pages -----------------------------------------------
+
+header {
+	font-family: 'Lobster Two', cursive;
+	font-size: 2.5em;
+	font-weight: bold;
+	background-color: $trans-grey;
+	height: 46px;
+	div {
+		img {
+			height: 36px;
+		}
+		float: right;
+		padding-top: 5px;
+		padding-right: 10px;
+		padding-left: 5px;
+		border-left: solid 1px;
+	}
+}
+
+// Footer
+
+footer {
+	background-color: $trans-grey;
+	text-align: center;
+	.footer-right {
+		float: right;
+		position: relative;
+		top: 25%;
+		right: 1%;
+	}
+	.footer-left {
+		float: left;
+		position: relative;
+		top: 30%;
+		left: 1%;
+	}
+
+	img {
+		position: relative;
+		height: 88%;
+		top: 8%;
+	
+	}
+}
+
+// Anchor tags
+
+a {
+	color: black;
+	text-decoration: none;
+
+}
+
+
+// Debate style buttons -----------------------------------------------
+
+.info {
+	// font-family: Bitter, Serif;
+	background-color: $instruction-color; // cornsilk;
+	padding: 5px;
+	margin-top: 10px;
+	font-size: 1.5em;
+	border-radius: $small-radius;
+}
+
+.between-header-footer {
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+
+.debate-style-button {
+	font-family: Bitter, Serif;
+	padding-bottom: .4em;
+	padding-top: .4em;
+	text-align: center;
+	background-color: $trans-sand;
+	border-radius: $standard-radius;
+	margin-top: 10px;
+	img {
+		height: 60px;
+	}
+
+	&:hover {
+	  @include background-image( radial-gradient(white, $sand));
+	}
+
+} 
+
+
+// Speaker Names -------------------------------------------------------
+
+
+fieldset {
+	border: 1px solid;
+	padding: 2%;
+	margin: 2%;
+	border-radius: $standard-radius;
+	background-color: $trans-white;
+	legend {
+		font-family: Bitter, Serif;
+		padding: 2px;
+	}
+}
+
+label {
+	display: inline-block;
+	font-family: Bitter, Serif;
+	font-weight: bold;
+	// border: solid 1px #d8d8d8;
+	border-radius: $standard-radius;
+	background-color: $instruction-color; // white;
+	padding: 7px;
+}
+
+input {
+	display: inline-block;
+	border-radius: $small-radius;
+	padding: 5px;
+	margin: 2px;
+	border: none;
+	background-color: $light-sand;
+	font-size: 1.2em;
+	width: 85%;
+}
+
+
+.div-with-header {
+	border: 1px solid #d8d8d8;
+	padding: 18px 5px 5px 5px;
+	margin-top: 15px;
+	border-radius: $small-radius;// $standard-radius;
+	background-color: white; // $white; // $trans-white;
+	position: relative;
+}
+
+
+
+.white-header {
+	font-family: Bitter, Serif;
+	font-weight: bold;
+	border: solid 1px #d8d8d8;
+	border-radius: $small-radius;
+	background-color: white;
+	padding: 5px;
+	position: absolute;
+	top: -.75em;
+}
+
+
+// Classes to allow the input fields to be hidden/shown based on the style.
+.style-tp {
+}
+
+.style-ld {
+	display: none;
+}
+
+.sand-hover:hover {
+	@include background-image( radial-gradient(white, $sand));
+}
+
+.button-prev-next {
+	font-family: Bitter, Serif;
+	font-size: 1.7em;
+	padding: 5px 5px 5px 5px;
+	padding-top: 5px;
+	margin-top: 5px;
+	min-height: 27px;
+	text-align: center;
+	background-color: $trans-sand;
+	border-radius: $standard-radius;
+	display: inline-block;
+	cursor: pointer;
+}
+
+
+#button-prev {
+	width: 14%;
+	float: left;
+}
+
+#button-next{
+	width: 79%;
+	// min-height: 30px;
+	float: right;
+}
+
+
+
+// Timer --------------------------------------------------------------------
+
+
+// Start page items - Headings, Timers, grid
+
+#speech-speaker-header {
+	font-size: 1.2em;
+	font-weight: bold;
+	#speech-heading {
+		display: inline-block;
+		min-width: 30%;
+		text-align: center;
+	}
+	#speaker-heading {
+		display: inline-block;
+		width: 63%;
+	}
+}
+
+#timer-container {
+}
+
+// Canvas for the graphic.
+#sand-column {
+	border: solid 1px;
+	width: 20%;
+	position: absolute;
+	height: 75%;
+	bottom: 4%;
+	border-radius: $standard-radius;
+}
+
+
+#timer-display {
+	width: 100%;
+	font-size: 5em;
+	display: inline-block;
+	text-align: right;
+}
+
+
+#start-stop-button {
+	font-family: Bitter, Serif;
+	font-size: 2.5rem;
+	text-align: center;
+	padding: 8px;
+	margin-top: 5px;
+	//margin-bottom: 2%;
+	border-radius: $standard-radius;
+}
+
+.start {
+	background-color: $trans-green;
+	&:hover {
+	  @include background-image(radial-gradient(white, $green));
+	  cursor: pointer;
+	}
+}
+.stop {
+	background-color: $trans-red;
+	&:hover {
+	  @include background-image(radial-gradient(white, $red));
+	  cursor: pointer;
+	}
+}
+
+
+.control-buttons {
+	font-family: Bitter, Serif; 
+	font-size: 1.6rem;
+	text-align: center;
+	border-radius: $standard-radius;
+	display: inline-block;
+	padding: 2% 0%;
+	margin-top: 5px;
+}
+
+#up-arrow {
+	width: 30%;
+	// padding: 2% 0%;
+	display: none;
+}
+
+#down-arrow {
+	width: 30%;
+	// padding: 2% 0%;
+}
+
+#next-speech-button {
+	width: 68%;
+	// padding: 2% 0;
+}
+
+#prev-speech-button {
+	width: 100%;
+	// padding: 2% 0;
+	margin-bottom: 2%;
+	// margin-left: 2%;
+}
+
+#well-done-image a {
+	padding-left: 2%;
+	padding-right: 2%;
+	margin-top: 2%;
+}
+
+
+table {
+	border: solid 1px;
+	width: 100%;
+	// margin: 2.5%;
+	border-radius: 10px;
+	td,th {
+		text-align: center;
+		border-right: solid 1px;
+	}
+	th {
+		background-color: grey;
+		font-weight: bold;
+	}
+	tr {
+		border-bottom: solid 1px;
+	}
+}
+
+#speech-speaker-table {
+	display: none;
+}
+
+.iconfont {
+	font-family: "web_symbolsregular";
+}
+
+.active {
+	background-color: $trans-sand;
+	&:hover {
+  		@include background-image(radial-gradient(white, $sand));
+  		cursor: pointer;
+  	}
+}
+.inactive {
+	background-color: $trans-grey;
+}
+
+
+
+// Speeches Grid Classes
+
+.completed {
+	background-color: $trans-red;
+}
+
+.current {
+	background-color: $trans-green;
+
+}
+.incomplete {
+	color: grey;
+	background-color: $trans-white;
+}
+
+
+// Well Done border-image
+#well-done-image {
+	// width: 90%;
+	// margin: 0% 5% 5% 5%; // top, right, bottom, left
+	// border: solid 1px;
+	// // border-radius: 10px;
+	background: white;
+	img {
+		max-width: 100%;
+		max-height: 100%;
+	}
+	display: none;
+}
+
+.block {
+	display: block;
+}
+
+
+@media screen and (min-width: 320px) {
+	#timer-display {
+		font-size: 6em;
+	}
+
+}
+
+@media screen and (min-width: 360px) {
+	#timer-display {
+		font-size: 7em;
+	}
+
+}
+
+@media screen and (min-width: 480px) {
+	header {
+		font-size: 2.5em;
+	}
+	#speech-speaker-header {
+		font-size: 2em;
+	}
+	#timer-display {
+		font-size: 10em;
+	}
+
+}
+
+@media screen and (min-width: 620px) {
+	#speech-speaker-header {
+		font-size: 2.5em;
+	}
+
+	#timer-display {
+		font-size: 12em;
+	}
+
+}
+
+@media screen and (min-width: 768px) {
+	#timer-display {
+		font-size: 15em;
+	}
+
+	header {
+		font-size: 3em;
+	}
+	#speech-speaker-header {
+		font-size: 3em;
+	}
+
+	#start-stop-button {
+		font-size: 3rem;
+	}
+}
+
+@media screen and (min-width: 980px) {
+	#timer-display {
+		font-size: 20em;
+	}
+
+	header {
+		font-size: 4em;
+	}
+	#speech-speaker-header {
+		font-size: 3em;
+	}
+	#start-stop-button {
+		font-size: 4rem;
+	}
+}
